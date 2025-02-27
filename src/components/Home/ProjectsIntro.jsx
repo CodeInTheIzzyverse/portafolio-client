@@ -98,7 +98,7 @@ function ProjectsIntro() {
         <section className="recent-projects">
             <h1>{title}</h1>
 
-            <article>
+            <article className="projects-slider">
                 <ArrowLeftIco
                     className="projects-arrow"
                     onClick={handlePrevClick}

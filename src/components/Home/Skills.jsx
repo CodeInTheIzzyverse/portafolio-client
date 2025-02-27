@@ -1,16 +1,20 @@
 import "./Skills.scss";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import SkillsLanguages from "./Skills/SkillsLanguages";
 import SkillsTools from "./Skills/SkillsTools";
 import SkillsPersonal from "./Skills/SkillsPersonal";
 import { useTranslation } from "react-i18next";
 
 function Skills() {
-    const [selectOption, setSelectOption] = useState("Languages");
     const { t } = useTranslation();
     const { skills } = t("home");
     const { title, options } = skills;
     const { languages, tools, personal } = options;
+    const [selectOption, setSelectOption] = useState(languages);
+
+    useEffect(() => {
+        setSelectOption(languages);
+    }, [languages]);
 
     const handleSelectOption = (e) => {
         setSelectOption(e.target.innerText);
@@ -25,9 +29,7 @@ function Skills() {
                         <li
                             onClick={handleSelectOption}
                             className={
-                                selectOption === "Languages"
-                                    ? "skill-active"
-                                    : ""
+                                selectOption === languages ? "skill-active" : ""
                             }
                         >
                             {languages}
@@ -35,7 +37,7 @@ function Skills() {
                         <li
                             onClick={handleSelectOption}
                             className={
-                                selectOption === "Tools" ? "skill-active" : ""
+                                selectOption === tools ? "skill-active" : ""
                             }
                         >
                             {tools}
@@ -43,9 +45,7 @@ function Skills() {
                         <li
                             onClick={handleSelectOption}
                             className={
-                                selectOption === "Personal"
-                                    ? "skill-active"
-                                    : ""
+                                selectOption === personal ? "skill-active" : ""
                             }
                         >
                             {personal}
@@ -53,9 +53,9 @@ function Skills() {
                     </ul>
                 </nav>
 
-                {selectOption === "Languages" && <SkillsLanguages />}
-                {selectOption === "Tools" && <SkillsTools />}
-                {selectOption === "Personal" && <SkillsPersonal />}
+                {selectOption === languages && <SkillsLanguages />}
+                {selectOption === tools && <SkillsTools />}
+                {selectOption === personal && <SkillsPersonal />}
             </article>
         </section>
     );

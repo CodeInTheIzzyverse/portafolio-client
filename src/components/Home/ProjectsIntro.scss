@@ -7,15 +7,16 @@ section.recent-projects {
         margin-top: 6rem;
     }
 
-    article {
+    article.projects-slider {
         display: flex;
         align-items: center;
         width: 90%;
         margin-top: 3rem;
 
-        svg.projects-arrow{
+        svg.projects-arrow{ 
             z-index: 10;
             width: 2.5rem;
+            min-width: 2.5rem;
             height: 2.5rem;
             background-color: var(--primary-color);
             border-radius: 50%;

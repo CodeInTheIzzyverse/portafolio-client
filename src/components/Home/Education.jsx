@@ -1,15 +1,19 @@
 import "./Education.scss";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import EducationCourses from "./Education/EducationCourses";
 import EducationUniversity from "./Education/EducationUniversity";
 import { useTranslation } from "react-i18next";
 
 function Educational() {
-    const [selectOption, setSelectOption] = useState("Courses");
     const { t } = useTranslation();
     const { education } = t("home");
     const { title, options } = education;
     const { option1, option2 } = options;
+    const [selectOption, setSelectOption] = useState(option1);
+
+    useEffect(() => {
+        setSelectOption(option1);
+    }, [option1]);
 
     const handleSelectOption = (e) => {
         setSelectOption(e.target.innerText);
@@ -25,7 +29,7 @@ function Educational() {
                         <li
                             onClick={handleSelectOption}
                             className={
-                                selectOption === "Courses" ? "skill-active" : ""
+                                selectOption === option1 ? "skill-active" : ""
                             }
                         >
                             {option1}
@@ -33,9 +37,7 @@ function Educational() {
                         <li
                             onClick={handleSelectOption}
                             className={
-                                selectOption === "University"
-                                    ? "skill-active"
-                                    : ""
+                                selectOption === option2 ? "skill-active" : ""
                             }
                         >
                             {option2}
@@ -43,8 +45,8 @@ function Educational() {
                     </ul>
                 </nav>
 
-                {selectOption === "Courses" && <EducationCourses />}
-                {selectOption === "University" && <EducationUniversity />}
+                {selectOption === option1 && <EducationCourses />}
+                {selectOption === option2 && <EducationUniversity />}
             </article>
         </section>
     );

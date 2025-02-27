@@ -3,6 +3,10 @@ import { useTranslation } from "react-i18next";
 import "./Project.scss";
 import ProjectCard from "../../components/Projects/ProjectCard";
 
+// imgs
+import ArrowLeftIco from "../../assets/ico/Extra/ArrowBack.svg?react";
+import ArrowRightIco from "../../assets/ico/Extra/ArrowForward.svg?react";
+
 const projects = [
     {
         id: 1,
@@ -161,11 +165,10 @@ function Project() {
                 </article>
 
                 <article className="projects-slider">
-                    <img
+                    <ArrowLeftIco
                         className={`projects-arrow ${
                             !canScrollLeft ? "disabled" : ""
                         }`}
-                        src="./public/assets/ico/Extra/ArrowBack.svg"
                         onClick={handlePrevClick}
                         style={{
                             opacity: canScrollLeft ? 1 : 0.5,
@@ -185,11 +188,10 @@ function Project() {
                             </div>
                         ))}
                     </div>
-                    <img
+                    <ArrowRightIco
                         className={`projects-arrow ${
                             !canScrollRight ? "disabled" : ""
                         }`}
-                        src="./public/assets/ico/Extra/ArrowForward.svg"
                         onClick={handleNextClick}
                         style={{
                             opacity: canScrollRight ? 1 : 0.5,

@@ -3,6 +3,10 @@ import ProjectCard from "../Projects/ProjectCard";
 import "./ProjectsIntro.scss";
 import { useTranslation } from "react-i18next";
 
+// imgs
+import ArrowLeftIco from "../../assets/ico/Extra/ArrowBack.svg?react";
+import ArrowRightIco from "../../assets/ico/Extra/ArrowForward.svg?react";
+
 const projects = [
     {
         id: 1,
@@ -95,9 +99,8 @@ function ProjectsIntro() {
             <h1>{title}</h1>
 
             <article>
-                <img
+                <ArrowLeftIco
                     className="projects-arrow"
-                    src="./public/assets/ico/Extra/ArrowBack.svg"
                     onClick={handlePrevClick}
                 />
                 <div className="projects-carousel">
@@ -115,9 +118,8 @@ function ProjectsIntro() {
                             </div>
                         ))}
                 </div>
-                <img
+                <ArrowRightIco
                     className="projects-arrow"
-                    src="./public/assets/ico/Extra/ArrowForward.svg"
                     onClick={handleNextClick}
                 />
             </article>

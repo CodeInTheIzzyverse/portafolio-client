@@ -3,6 +3,7 @@ import "./ProjectCard.scss";
 
 // imgs
 import projectCardImg from "/assets/img/projectCard.png";
+import OpenInNewIco from "../../assets/ico/ProjectCard/openInNew.svg?react";
 
 function ProjectCard({ name, date, description, languages, link }) {
     return (
@@ -24,10 +25,7 @@ function ProjectCard({ name, date, description, languages, link }) {
                     <a href={link} target="_blank" rel="noopener noreferrer">
                         View project
                     </a>
-                    <img
-                        src="./public/assets/ico/ProjectCard/openInNew.svg"
-                        alt="Open in new tab"
-                    />
+                    <OpenInNewIco />
                 </div>
             </div>
         </div>

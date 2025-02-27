@@ -1,0 +1,53 @@
+section.recent-projects {
+    h1 {
+        font-size: 2.5em;
+        margin-bottom: 0.5em;
+        margin-top: 6rem;
+    }
+
+    article {
+        display: flex;
+        align-items: center;
+        width: 90%;
+        margin-top: 3rem;
+
+        .projects-arrow{
+            z-index: 10;
+            width: 2.5rem;
+            background-color: var(--primary-color);
+            border-radius: 50%;
+            box-shadow: 0px 2px 3px #000;
+
+            &:hover {
+                background-color: var(--secondary-color);
+            }
+        }
+
+        div.projects-carousel {
+            width: 80vw;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            gap: 2rem;
+
+            div.project-card {
+                flex-shrink: 0;
+            }
+        }
+
+    }
+}
+
+@media only screen and (min-width: 1024px) {
+    section.recent-projects {
+        div.projects-carousel {
+            justify-content: center;
+        }
+    }
+}
+
+// Smartphone
+@media only screen and (max-width: 768px) {}
+
+// Tablet
+@media only screen and (min-width: 768px) and (max-width: 991px) {}

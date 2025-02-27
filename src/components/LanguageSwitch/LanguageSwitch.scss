@@ -1,0 +1,10 @@
+select.language-switch{
+    position: fixed;
+    top: 1rem;
+    right: 1rem;
+    padding: 0.5em;
+    border-radius: var(--border-radius);
+    background-color: var(--secondary-color);
+    border: none;
+    font-family: "Cutive Mono", sans-serif;
+}

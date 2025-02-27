@@ -1,0 +1,54 @@
+{
+    "home": {
+        "hero": {
+            "title": "Ciao, sono Isabela Bedoya",
+            "subtitle": "Sviluppatore Full Stack",
+            "description": "Sono una Full Stack Web Developer e Instructor. Nel mio tempo libero realizzo Videogiochi e musica!",
+            "button1": "Contattami",
+            "button2": "Il mio CV"
+        },
+        "skills": {
+            "title": "Competenze",
+            "options": {
+                "languages": "Lingue",
+                "tools": "Utensili",
+                "personal": "Personale"
+            }
+        },
+        "projectsIntro": {
+            "title": "Progetti recenti"
+        },
+        "education": {
+            "title": "Education",
+            "options": {
+                "option1": "Corsi",
+                "option2": "Università"
+            },
+            "content": {}
+        }
+    },
+    "projects": {
+        "title": "Tutti i miei Progetti",
+        "select": "Linguaggi",
+        "checkbox1": "Quest'anno"
+    },
+    "courses": {
+        "title": "Percorsi di apprendimento"
+    },
+    "contact": {
+        "title": "Contatto",
+        "info": {
+            "name": "nome",
+            "email": "posta",
+            "location": "posizione",
+            "formButton": "Mandami un messaggio!"
+        },
+        "form": {
+            "Name": "Nome",
+            "Email": "Posta",
+            "Message": "Messaggio",
+            "SendButton": "Inviare",
+            "InfoButton": "Vedi informazioni"
+        }
+    }
+}

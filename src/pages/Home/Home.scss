@@ -1,0 +1,30 @@
+main.home {
+    display: flex;
+    width: 400vw; // modificar al agregar el Testimonials. 4 secciones.
+    height: 100vh;
+    
+    section {
+        width: 100vw;
+        max-width: 100vw;
+        height: 100vh;
+        flex-shrink: 0;
+        overflow-x: hidden;
+    }
+}
+
+// Smartphone
+@media only screen and (max-width: 768px) {
+    main.home {
+        display: flex;
+        flex-direction: column; // Apila las secciones verticalmente
+        width: 100vw;
+        height: auto;
+        overflow-x: hidden;
+    }
+
+    section {
+        width: 100%;
+        height: auto;
+        min-height: 100vh;
+    }
+}

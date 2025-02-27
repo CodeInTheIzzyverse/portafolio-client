@@ -2,10 +2,10 @@ import { useTranslation } from "react-i18next";
 import Button from "../Buttons/Button";
 import "./Hero.scss";
 import cv from "../../assets/cv/cv.txt";
+import { Link } from "react-router-dom";
 
 // imgs
-import Izzy from "/assets/img/Izzy.jpg";
-import { Link } from "react-router-dom";
+import Izzy from "../../assets/img/Izzy.jpg";
 
 function Hero() {
     const { t } = useTranslation();

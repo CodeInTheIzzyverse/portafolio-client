@@ -2,7 +2,7 @@ import PropTypes from "prop-types";
 import "./ProjectCard.scss";
 
 // imgs
-import projectCardImg from "/assets/img/projectCard.png";
+import projectCardImg from "../../assets/img/projectCard.png";
 import OpenInNewIco from "../../assets/ico/ProjectCard/openInNew.svg?react";
 
 function ProjectCard({ name, date, description, languages, link }) {

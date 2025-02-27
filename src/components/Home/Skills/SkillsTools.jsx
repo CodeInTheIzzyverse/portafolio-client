@@ -1,7 +1,7 @@
 // imgs
-import PowerPoint from "/assets/ico/Tools/PowerPoint.svg";
-import Postman from "/assets/ico/Tools/Postman.svg";
-import git from "/assets/ico/Tools/git.svg";
+import PowerPoint from "../../../assets/ico/Tools/PowerPoint.svg";
+import Postman from "../../../assets/ico/Tools/Postman.svg";
+import git from "../../../assets/ico/Tools/git.svg";
 
 function SkillsTools() {
     return (

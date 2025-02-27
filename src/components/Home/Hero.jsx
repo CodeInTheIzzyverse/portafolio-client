@@ -1,6 +1,8 @@
 import { useTranslation } from "react-i18next";
 import Button from "../Buttons/Button";
 import "./Hero.scss";
+// imgs
+import Izzy from "/assets/img/Izzy.jpg";
 
 function Hero() {
     const { t } = useTranslation();
@@ -18,7 +20,7 @@ function Hero() {
             </article>
 
             <article className="hero_logo">
-                <img src="./public/assets/img/Izzy.jpg" alt="Izzy" />
+                <img src={Izzy} alt="Izzy" />
             </article>
         </section>
     );

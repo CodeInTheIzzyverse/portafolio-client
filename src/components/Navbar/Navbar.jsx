@@ -1,40 +1,44 @@
 import "./Navbar.scss";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
+
+// imgs
+import HomeIco from "../../assets/ico/Navbar/home.svg?react";
+import ProjectsIco from "../../assets/ico/Navbar/projects.svg?react";
+import CoursesIco from "../../assets/ico/Navbar/courses.svg?react";
+import ContactIco from "../../assets/ico/Navbar/contact.svg?react";
 
 function Navbar() {
+    const location = useLocation();
+
     return (
         <nav className="navbar">
             <ul>
-                <li className="active">
+                <li className={location.pathname === "/" ? "active" : ""}>
                     <Link to="/">
-                        <img
-                            src="./public/assets/ico/Menu/home.svg"
-                            alt="home"
-                        />
+                        <HomeIco />
                     </Link>
                 </li>
-                <li>
+                <li
+                    className={
+                        location.pathname === "/projects" ? "active" : ""
+                    }
+                >
                     <Link to="/projects">
-                        <img
-                            src="./public/assets/ico/Menu/projects.svg"
-                            alt="projects"
-                        />
+                        <ProjectsIco />
                     </Link>
                 </li>
-                <li>
+                <li
+                    className={location.pathname === "/courses" ? "active" : ""}
+                >
                     <Link to="/courses">
-                        <img
-                            src="./public/assets/ico/Menu/courses.svg"
-                            alt="courses"
-                        />
+                        <CoursesIco />
                     </Link>
                 </li>
-                <li>
+                <li
+                    className={location.pathname === "/contact" ? "active" : ""}
+                >
                     <Link to="/contact">
-                        <img
-                            src="./public/assets/ico/Menu/contact.svg"
-                            alt="contact"
-                        />
+                        <ContactIco />
                     </Link>
                 </li>
             </ul>

@@ -1,13 +1,13 @@
 import PropTypes from "prop-types";
 import "./ProjectCard.scss";
 
+// imgs
+import projectCardImg from "/assets/img/projectCard.png";
+
 function ProjectCard({ name, date, description, languages, link }) {
     return (
         <div className="project-card">
-            <img
-                src="./public/assets/img/projectCard.png"
-                alt={`${name} project`}
-            />
+            <img src={projectCardImg} alt={`${name} project`} />
 
             <div className="project-info">
                 <div className="project-header">
